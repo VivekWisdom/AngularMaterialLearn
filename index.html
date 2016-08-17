@@ -2,15 +2,32 @@
 <html>
     <head>
         <title>Angular Material Learn</title>
+        <link rel="stylesheet" href="node_modules/angular-material/angular-material.min.css"/>
         <link rel="stylesheet" href="style.css" charset="utf-8">
-        <link href="./node_modules/angular-material/angular-material.min.css" />
     </head>
-    <body ng-app="MaterialApp">
+    <body ng-app="MaterialApp" layout="column">
         <md-toolbar>
-            <h1>Angular Material App</h1>
+            <h3>Angular Material App</h3>
         </md-toolbar>
-        <md-sidenav md-is-locked-open="true">SideNav</md-sidenav>
-        <md-content id="content">Content</md-content>
+        <div class="conatiner" layout="row" flex>
+            <md-sidenav class="sidenav md-whiteframe-4dp" md-is-locked-open="true">
+                <md-list>
+                    <md-list-item>
+                        <md-button>
+                            <md-icon  md-svg-src="svg/ic_account_circle_black_48px.svg" class="avatar"></md-icon>
+                            Vivek Wisdom
+                        </md-button>
+                    </md-list-item>
+                    <md-list-item>
+                        <md-button>
+                            <md-icon md-svg-src="svg/ic_account_circle_black_48px.svg" class="avatar"></md-icon>
+                            Vishal Wisdom
+                        </md-button>
+                    </md-list-item>
+                </md-list>
+            </md-sidenav>
+            <md-content class="content" id="content" flex>Content</md-content>
+        </div>
 
         <!-- JavaScript Libraries -->
         <script src="./node_modules/angular/angular.min.js"></script>
